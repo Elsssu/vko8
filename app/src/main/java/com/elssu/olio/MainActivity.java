@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         BigDecimal USDRate = new BigDecimal("1.05");
         BigDecimal USD = euro.multiply(USDRate);
         BigDecimal USDRounded = USD.setScale(2, RoundingMode.HALF_UP);
-        String output = String.valueOf(USD);
+        String dollar = "$";
+        String output = dollar + USDRounded;
         outputText.setText(output);
 
 
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         BigDecimal GDPRate = new BigDecimal("0.83");
         BigDecimal GDP = euro.multiply(GDPRate);
         BigDecimal GDPRounded = GDP.setScale(2, RoundingMode.HALF_UP);
-        String output = String.valueOf(GDP);
+        String pound ="£";
+        String output = pound + GDPRounded;
         outputText.setText(output);
     }
 }
